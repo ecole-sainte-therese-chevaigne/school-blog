@@ -1,0 +1,111 @@
+# Pages CMS editor for the school blog
+# Content stays in data/posts.json; uploaded files go under assets/articles/uploads.
+media:
+  - name: article_media
+    label: Médias des articles
+    input: assets/articles
+    output: assets/articles
+    rename: safe
+    extensions: [webp, jpg, jpeg, png, pdf]
+    categories: [image, document]
+
+content:
+  - name: posts
+    label: Articles du blog
+    type: file
+    path: data/posts.json
+    format: json
+    fields:
+      - name: version
+        label: false
+        type: number
+        readonly: true
+      - name: language
+        label: false
+        type: string
+        readonly: true
+      - name: posts
+        label: Articles
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title} — {date}"
+        fields:
+          - name: id
+            label: false
+            type: uuid
+            options:
+              editable: false
+          - name: title
+            label: Titre
+            type: string
+            required: true
+          - name: date
+            label: Date de publication
+            type: date
+            required: true
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: dateSource
+            label: false
+            type: string
+            hidden: true
+          - name: description
+            label: Résumé
+            type: text
+          - name: content
+            label: Texte de l’article
+            type: text
+          - name: category
+            label: Rubrique
+            type: select
+            options:
+              placeholder: Choisir une rubrique
+              values:
+                - Événements et vie associative
+                - Pastorale
+                - Sorties et séjours
+                - Sport
+                - Vie des classes
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+          - name: photos
+            label: Photos
+            type: image
+            options:
+              media: article_media
+              path: uploads
+              categories: [image]
+              multiple: true
+              unique: true
+              extensions: [webp, jpg, jpeg, png]
+          - name: documents
+            label: Documents PDF
+            type: file
+            options:
+              media: article_media
+              path: documents/uploads
+              categories: [document]
+              multiple: true
+              unique: true
+              extensions: [pdf]
+          - name: photoDates
+            label: false
+            type: string
+            hidden: true
+            list: true
+          - name: source
+            label: false
+            type: string
+            hidden: true
+
+settings:
+  content: true
+  commit:
+    templates:
+      create: "Article : {path} ajouté"
+      update: "Article : {path} modifié"
