@@ -3,12 +3,17 @@
 }
 
 html {
+  background: #aebe79;
   scroll-behavior: smooth;
+}
+
+html.embedded-blog {
+  background: transparent;
 }
 
 body {
   margin: 0;
-  background: #aebe79;
+  background: transparent;
   color: #444;
   font: 16px/1.55 Arial, Helvetica, sans-serif;
 }
