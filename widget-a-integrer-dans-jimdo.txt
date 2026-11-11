@@ -1,6 +1,6 @@
 <iframe
   id="school-github-blog"
-  src="https://ecole-sainte-therese-chevaigne.github.io/school-blog/"
+  data-src="https://ecole-sainte-therese-chevaigne.github.io/school-blog/"
   title="La vie de l’école Sainte-Thérèse"
   loading="lazy"
   scrolling="no"
@@ -12,7 +12,11 @@
   var frame = document.getElementById('school-github-blog');
   if (!frame) return;
 
-  var blogOrigin = 'https://ecole-sainte-therese-chevaigne.github.io';
+  var blogUrl = new URL(frame.getAttribute('data-src'));
+  var category = new URLSearchParams(window.location.search).get('category');
+  if (category) blogUrl.searchParams.set('category', category);
+
+  var blogOrigin = blogUrl.origin;
 
   window.addEventListener('message', function (event) {
     if (event.origin !== blogOrigin || event.source !== frame.contentWindow) return;
@@ -23,5 +27,7 @@
 
     frame.style.height = Math.ceil(height) + 'px';
   });
+
+  frame.src = blogUrl.toString();
 })();
 </script>

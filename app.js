@@ -8,6 +8,7 @@
   const search = $('#search');
   const category = $('#category');
   const tag = $('#tag');
+  const filterSummary = $('#filter-summary');
 
   let all = [];
   let shown = 12;
@@ -130,6 +131,9 @@
       || '<p class="empty">Aucun article ne correspond à votre recherche.</p>';
     count.textContent = `${items.length} article${items.length > 1 ? 's' : ''}`;
     more.hidden = shown >= items.length;
+    filterSummary.textContent = category.value
+      ? `Rubrique : ${category.value} · modifier les filtres`
+      : 'Rechercher ou filtrer les articles';
     scheduleHeightReport();
   }
 
@@ -220,6 +224,13 @@
         .sort((a, b) => a.localeCompare(b, 'fr')), 'Toutes les rubriques');
       fill(tag, [...new Set(all.flatMap((post) => post.tags || []))]
         .sort((a, b) => a.localeCompare(b, 'fr')), 'Tous les tags');
+      const requestedCategory = new URLSearchParams(window.location.search).get('category');
+      if (requestedCategory) {
+        const matchingCategory = Array.from(category.options).find((option) =>
+          option.value.toLocaleLowerCase('fr') === requestedCategory.trim().toLocaleLowerCase('fr')
+        );
+        if (matchingCategory) category.value = matchingCategory.value;
+      }
       render();
       if (location.hash) openArticle(decodeURIComponent(location.hash.slice(1)));
     })
