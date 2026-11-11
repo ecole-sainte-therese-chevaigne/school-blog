@@ -5,19 +5,16 @@
     {
       "date": "2026-10-09",
       "titre": "Pot de rentrée",
-      "heure": "",
       "description": "Un moment de convivialité, d’échange entre parents, enseignants et enfants pour bien commencer l’année 2026–2027."
     },
     {
       "date": "2026-11-03",
       "titre": "Assemblée générale de l’APEL",
-      "heure": "",
       "description": "Élection du nouveau bureau !"
     },
     {
       "date": "2026-11-11",
       "titre": "Cérémonie du 11 novembre",
-      "heure": "",
       "description": "La cérémonie de commémoration de l’Armistice du 11 novembre 1918 se tiendra devant le Monument du Souvenir le 11 novembre 2026, avec la participation de l’école privée."
     },
     {
@@ -29,20 +26,29 @@
     {
       "date": "2026-12-12",
       "titre": "Arbre de Noël",
-      "heure": "",
       "description": "Un joli spectacle de Noël, préparé avec enthousiasme par nos enseignants et leurs élèves, pour enchanter petits et grands, avant l’arrivée tant attendue du Père Noël ! Au programme : cadeaux, gourmandises, sourires et partage ! Un merveilleux moment de fête pour toute notre école !"
     },
     {
       "date": "2027-03-13",
       "titre": "Repas des Familles",
-      "heure": "",
       "description": "Un moment chaleureux et festif à partager en famille ou entre amis ! Repas, musique, danse et buvette. Bonne humeur, convivialité et partage au rendez-vous ! Venez nombreux faire la fête avec nous ! N’oubliez pas de réserver, places limitées."
     },
     {
       "date": "2027-06-20",
       "titre": "Kermesse",
-      "heure": "",
       "description": "Un rendez-vous incontournable, avec un superbe spectacle des enfants pour clôturer l’année scolaire 2026–2027 ! Des stands, des activités, des rires et plein de surprises ! Et bien sûr, restauration sur place. Une journée à vivre en famille, à ne surtout pas manquer !"
+    },
+    {
+      "date": "2026-10-01",
+      "titre": "Fête de Sainte Thérèse"
+    },
+    {
+      "date": "2026-11-09",
+      "titre": "Journée \"bien être à l'école\""
+    },
+    {
+      "date": "2026-12-14",
+      "titre": "Journée Pull de Noël"
     }
   ]
 }
