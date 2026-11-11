@@ -1,1 +1,231 @@
-(()=>{const $=s=>document.querySelector(s);const cards=$('#cards'),count=$('#count'),more=$('#more'),listing=$('#listing'),article=$('#article'),search=$('#search'),category=$('#category'),tag=$('#tag');let all=[],shown=12,selected=null;const mediaSrc=m=>typeof m==='string'?m:(m?.src||'');const mediaAlt=(m,t)=>typeof m==='string'?t:(m?.alt||t);const mediaName=(m)=>typeof m==='string'?decodeURIComponent(m.split('/').pop()):(m?.name||'Ouvrir le document');const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateFmt=d=>{if(!d)return 'Date non précisée';const [y,m,day]=d.split('-').map(Number);return new Intl.DateTimeFormat('fr-FR',{dateStyle:'long',timeZone:'UTC'}).format(new Date(Date.UTC(y,m-1,day)))};const photoPeriod=p=>{const d=p.photoDates||[];return d.length>1&&d[0]!==d[d.length-1]?`<p class="photo-period">Photos prises du ${esc(dateFmt(d[0]))} au ${esc(dateFmt(d[d.length-1]))}</p>`:''};function fill(sel,values,label){sel.innerHTML=`<option value="">${label}</option>`+values.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('')}function filtered(){let q=search.value.trim().toLocaleLowerCase('fr');return all.filter(p=>(!category.value||p.category===category.value)&&(!tag.value||(p.tags||[]).includes(tag.value))&&(!q||[p.title,p.description,p.content,p.category,...(p.tags||[])].join(' ').toLocaleLowerCase('fr').includes(q))).sort((a,b)=>(b.date||'').localeCompare(a.date||'')||a.title.localeCompare(b.title,'fr'))}function card(p){let img=mediaSrc(p.photos?.[0]);return `<article class="card">${img?`<img class="cover" loading="lazy" src="${esc(img)}" alt="${esc(mediaAlt(p.photos[0],p.title))}">`:''}<div class="card-body"><div class="date">${esc(dateFmt(p.date))}</div>${photoPeriod(p)}<h2>${esc(p.title)}</h2>${p.description?`<p class="description">${esc(p.description)}</p>`:''}<div class="chips">${p.category?`<span class="chip category-chip">${esc(p.category)}</span>`:''}${(p.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div><button class="open" data-open="${esc(p.id)}">Lire l’article →</button></div></article>`}function render(){if(selected)return;const items=filtered();cards.innerHTML=items.slice(0,shown).map(card).join('')||'<p class="empty">Aucun article ne correspond à votre recherche.</p>';count.textContent=`${items.length} article${items.length>1?'s':''}`;more.hidden=shown>=items.length}function openArticle(id){selected=all.find(p=>p.id===id);if(!selected)return;listing.hidden=true;article.hidden=false;let p=selected;article.innerHTML=`<div class="article-detail"><button class="open" id="back">← Retour aux articles</button><div class="date">${esc(dateFmt(p.date))}</div>${photoPeriod(p)}<h2>${esc(p.title)}</h2>${p.description?`<p class="description">${esc(p.description)}</p>`:''}<div class="chips">${p.category?`<span class="chip category-chip">${esc(p.category)}</span>`:''}${(p.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div>${p.content?`<div class="article-content">${esc(p.content)}</div>`:''}${p.documents?.length?`<h3>Documents</h3><ul class="docs">${p.documents.map(d=>`<li><a href="${esc(mediaSrc(d))}" target="_blank" rel="noopener">${esc(mediaName(d))}</a></li>`).join('')}</ul>`:''}${p.photos?.length?`<h3>Photos</h3><div class="gallery">${p.photos.map(im=>`<a href="${esc(mediaSrc(im))}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(mediaSrc(im))}" alt="${esc(mediaAlt(im,p.title))}"></a>`).join('')}</div>`:''}${p.source?`<a class="source-link" href="${esc(p.source)}" target="_blank" rel="noopener">Page d’origine</a>`:''}</div>`;window.scrollTo(0,0);$('#back').onclick=closeArticle;history.pushState({post:id},'',`#${encodeURIComponent(id)}`)}function closeArticle(){selected=null;article.hidden=true;listing.hidden=false;article.innerHTML='';if(location.hash)history.replaceState({},'',location.pathname+location.search);render()}cards.addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(b)openArticle(b.dataset.open)});[search,category,tag].forEach(x=>x.addEventListener('input',()=>{shown=12;render()}));more.onclick=()=>{shown+=12;render()};window.addEventListener('popstate',()=>{if(selected)closeArticle()});fetch('./data/posts.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{all=data.posts||[];fill(category,[...new Set(all.map(p=>p.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr')),'Toutes les rubriques');fill(tag,[...new Set(all.flatMap(p=>p.tags||[]))].sort((a,b)=>a.localeCompare(b,'fr')),'Tous les tags');render();if(location.hash){const id=decodeURIComponent(location.hash.slice(1));openArticle(id)}}).catch(err=>{cards.innerHTML='<p class="empty">Les articles ne sont pas disponibles pour le moment. Vérifiez le déploiement GitHub Pages.</p>';console.error(err)})})();
+(() => {
+  const $ = (selector) => document.querySelector(selector);
+  const cards = $('#cards');
+  const count = $('#count');
+  const more = $('#more');
+  const listing = $('#listing');
+  const article = $('#article');
+  const search = $('#search');
+  const category = $('#category');
+  const tag = $('#tag');
+
+  let all = [];
+  let shown = 12;
+  let selected = null;
+
+  function reportFrameHeight() {
+    if (window.parent === window) return;
+
+    const height = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight
+    );
+    let targetOrigin = '*';
+    try {
+      if (document.referrer) targetOrigin = new URL(document.referrer).origin;
+    } catch (error) {
+      // Keep the wildcard fallback; the parent widget validates the sender.
+    }
+    window.parent.postMessage({ type: 'school-blog-height', height }, targetOrigin);
+  }
+
+  let heightFrame = 0;
+  function scheduleHeightReport() {
+    cancelAnimationFrame(heightFrame);
+    heightFrame = requestAnimationFrame(reportFrameHeight);
+  }
+
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(scheduleHeightReport).observe(document.documentElement);
+  }
+  window.addEventListener('load', scheduleHeightReport);
+
+  const mediaSrc = (media) => typeof media === 'string' ? media : (media?.src || '');
+  const mediaAlt = (media, title) => typeof media === 'string' ? title : (media?.alt || title);
+  const mediaName = (media) => typeof media === 'string'
+    ? decodeURIComponent(media.split('/').pop())
+    : (media?.name || 'Ouvrir le document');
+
+  const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[character]));
+
+  const dateFmt = (date) => {
+    if (!date) return 'Date non précisée';
+    const [year, month, day] = date.split('-').map(Number);
+    const monthName = new Intl.DateTimeFormat('fr-FR', {
+      month: 'long',
+      timeZone: 'UTC'
+    }).format(new Date(Date.UTC(year, month - 1, day)));
+    return `${String(day).padStart(2, '0')}. ${monthName} ${year}`;
+  };
+
+  const photoPeriod = (post) => {
+    const dates = post.photoDates || [];
+    if (dates.length > 1 && dates[0] !== dates[dates.length - 1]) {
+      return `<p class="photo-period">Photos prises du ${esc(dateFmt(dates[0]))} au ${esc(dateFmt(dates[dates.length - 1]))}</p>`;
+    }
+    return '';
+  };
+
+  const meta = (post) => {
+    const categoryLabel = post.category
+      ? `<button class="category-link" type="button" data-category="${esc(post.category)}">${esc(post.category)}</button>`
+      : '';
+    const separator = post.category && post.date ? '<span class="meta-separator" aria-hidden="true">·</span>' : '';
+    const date = post.date
+      ? `<time class="date" datetime="${esc(post.date)}">${esc(dateFmt(post.date))}</time>`
+      : '<span class="date">Date non précisée</span>';
+    return `<p class="meta">${categoryLabel}${separator}${date}</p>`;
+  };
+
+  function fill(select, values, label) {
+    select.innerHTML = `<option value="">${label}</option>`
+      + values.map((value) => `<option value="${esc(value)}">${esc(value)}</option>`).join('');
+  }
+
+  function filtered() {
+    const query = search.value.trim().toLocaleLowerCase('fr');
+    return all
+      .filter((post) => (
+        (!category.value || post.category === category.value)
+        && (!tag.value || (post.tags || []).includes(tag.value))
+        && (!query || [post.title, post.description, post.content, post.category, ...(post.tags || [])]
+          .join(' ')
+          .toLocaleLowerCase('fr')
+          .includes(query))
+      ))
+      .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.title.localeCompare(b.title, 'fr'));
+  }
+
+  function card(post) {
+    const image = mediaSrc(post.photos?.[0]);
+    const cover = image
+      ? `<img class="cover" loading="lazy" src="${esc(image)}" alt="${esc(mediaAlt(post.photos[0], post.title))}">`
+      : '';
+    const description = post.description
+      ? `<p class="description">${esc(post.description)}</p>`
+      : '';
+
+    return `<article class="card">
+      <div class="card-body">
+        ${meta(post)}
+        ${photoPeriod(post)}
+        <h2><a href="#${encodeURIComponent(post.id)}" data-open="${esc(post.id)}">${esc(post.title)}</a></h2>
+        ${cover}
+        ${description}
+        <button class="open" type="button" data-open="${esc(post.id)}">Lire la suite…</button>
+      </div>
+    </article>`;
+  }
+
+  function render() {
+    if (selected) return;
+    const items = filtered();
+    cards.innerHTML = items.slice(0, shown).map(card).join('')
+      || '<p class="empty">Aucun article ne correspond à votre recherche.</p>';
+    count.textContent = `${items.length} article${items.length > 1 ? 's' : ''}`;
+    more.hidden = shown >= items.length;
+    scheduleHeightReport();
+  }
+
+  function openArticle(id) {
+    selected = all.find((post) => post.id === id);
+    if (!selected) return;
+
+    listing.hidden = true;
+    article.hidden = false;
+    const post = selected;
+    const description = post.description
+      ? `<p class="description">${esc(post.description)}</p>`
+      : '';
+
+    article.innerHTML = `<div class="article-detail">
+      <button class="back" id="back" type="button">← Retour aux articles</button>
+      ${meta(post)}
+      ${photoPeriod(post)}
+      <h2>${esc(post.title)}</h2>
+      ${description}
+      ${post.content ? `<div class="article-content">${esc(post.content)}</div>` : ''}
+      ${post.documents?.length ? `<h3>Documents</h3><ul class="docs">${post.documents.map((document) => (
+        `<li><a href="${esc(mediaSrc(document))}" target="_blank" rel="noopener">${esc(mediaName(document))}</a></li>`
+      )).join('')}</ul>` : ''}
+      ${post.photos?.length ? `<h3>Photos</h3><div class="gallery">${post.photos.map((image) => (
+        `<a href="${esc(mediaSrc(image))}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(mediaSrc(image))}" alt="${esc(mediaAlt(image, post.title))}"></a>`
+      )).join('')}</div>` : ''}
+      ${post.source ? `<a class="source-link" href="${esc(post.source)}" target="_blank" rel="noopener">Page d’origine</a>` : ''}
+    </div>`;
+
+    window.scrollTo(0, 0);
+    $('#back').onclick = closeArticle;
+    history.pushState({ post: id }, '', `#${encodeURIComponent(id)}`);
+    scheduleHeightReport();
+  }
+
+  function closeArticle() {
+    selected = null;
+    article.hidden = true;
+    listing.hidden = false;
+    article.innerHTML = '';
+    if (location.hash) history.replaceState({}, '', location.pathname + location.search);
+    render();
+    scheduleHeightReport();
+  }
+
+  cards.addEventListener('click', (event) => {
+    const categoryButton = event.target.closest('[data-category]');
+    if (categoryButton) {
+      category.value = categoryButton.dataset.category;
+      shown = 12;
+      render();
+      return;
+    }
+
+    const openButton = event.target.closest('[data-open]');
+    if (openButton) openArticle(openButton.dataset.open);
+  });
+
+  [search, category, tag].forEach((control) => {
+    control.addEventListener('input', () => {
+      shown = 12;
+      render();
+    });
+    control.addEventListener('change', () => {
+      shown = 12;
+      render();
+    });
+  });
+
+  more.onclick = () => {
+    shown += 12;
+    render();
+  };
+
+  window.addEventListener('popstate', () => {
+    if (selected) closeArticle();
+  });
+
+  fetch('./data/posts.json')
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then((data) => {
+      all = data.posts || [];
+      fill(category, [...new Set(all.map((post) => post.category).filter(Boolean))]
+        .sort((a, b) => a.localeCompare(b, 'fr')), 'Toutes les rubriques');
+      fill(tag, [...new Set(all.flatMap((post) => post.tags || []))]
+        .sort((a, b) => a.localeCompare(b, 'fr')), 'Tous les tags');
+      render();
+      if (location.hash) openArticle(decodeURIComponent(location.hash.slice(1)));
+    })
+    .catch((error) => {
+      cards.innerHTML = '<p class="empty">Les articles ne sont pas disponibles pour le moment. Vérifiez le déploiement GitHub Pages.</p>';
+      console.error(error);
+      scheduleHeightReport();
+    });
+})();
