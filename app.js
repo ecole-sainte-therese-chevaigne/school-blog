@@ -144,7 +144,7 @@
     listing.hidden = true;
     article.hidden = false;
     const post = selected;
-    const description = post.description
+    const description = !post.content && post.description
       ? `<p class="description">${esc(post.description)}</p>`
       : '';
 
