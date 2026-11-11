@@ -75,7 +75,7 @@
 
   const meta = (post) => {
     const categoryLabel = post.category
-      ? `<button class="category-link" type="button" data-category="${esc(post.category)}">${esc(post.category)}</button>`
+      ? `<span class="category-label">${esc(post.category)}</span>`
       : '';
     const separator = post.category && post.date ? '<span class="meta-separator" aria-hidden="true">·</span>' : '';
     const date = post.date
@@ -161,7 +161,6 @@
       ${post.photos?.length ? `<h3>Photos</h3><div class="gallery">${post.photos.map((image) => (
         `<a href="${esc(mediaSrc(image))}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(mediaSrc(image))}" alt="${esc(mediaAlt(image, post.title))}"></a>`
       )).join('')}</div>` : ''}
-      ${post.source ? `<a class="source-link" href="${esc(post.source)}" target="_blank" rel="noopener">Page d’origine</a>` : ''}
     </div>`;
 
     window.scrollTo(0, 0);
@@ -181,14 +180,6 @@
   }
 
   cards.addEventListener('click', (event) => {
-    const categoryButton = event.target.closest('[data-category]');
-    if (categoryButton) {
-      category.value = categoryButton.dataset.category;
-      shown = 12;
-      render();
-      return;
-    }
-
     const openButton = event.target.closest('[data-open]');
     if (openButton) openArticle(openButton.dataset.open);
   });
