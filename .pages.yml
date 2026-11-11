@@ -103,6 +103,49 @@ content:
             type: string
             hidden: true
 
+
+
+  - name: agenda
+    label: Calendrier scolaire
+    type: file
+    path: data/evenements-2026-2027.json
+    format: json
+    fields:
+      - name: anneeScolaire
+        label: Année scolaire
+        type: string
+      - name: demonstration
+        label: Mode démonstration
+        type: boolean
+        readonly: true
+      - name: evenements
+        label: Événements
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titre} — {date}"
+        fields:
+          - name: date
+            label: Date
+            type: date
+            required: true
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: titre
+            label: Titre
+            type: string
+            required: true
+          - name: heure
+            label: Heure
+            type: string
+          - name: description
+            label: Description
+            type: text
+
+
+
 settings:
   content: true
   commit:
