@@ -22,7 +22,8 @@ body {
 }
 
 .wrap {
-  width: min(1060px, 84%);
+  width: 100%;
+  max-width: 1100px;
   margin-inline: auto;
   padding: 22px 0 42px;
 }
@@ -132,7 +133,7 @@ body {
 .card h2 {
   margin: 0 0 22px;
   font-family: Lato, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -150,7 +151,8 @@ body {
 
 .cover {
   display: block;
-  width: min(54%, 560px);
+  width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 0 0 18px;
   object-fit: contain;
@@ -211,7 +213,8 @@ body {
 }
 
 .article-detail {
-  max-width: 900px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
 }
 
@@ -222,7 +225,7 @@ body {
 .article-detail h2 {
   margin: 0 0 18px;
   font-family: Lato, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 64px;
   font-weight: 300;
   line-height: 1.05;
 }
@@ -250,13 +253,13 @@ body {
 
 .gallery a {
   display: block;
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
 }
 
 .gallery img {
   display: block;
-  width: auto;
+  width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 0;
@@ -280,7 +283,7 @@ body {
   display: none !important;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .wrap {
     width: 92%;
   }
@@ -293,8 +296,12 @@ body {
     grid-column: 1 / -1;
   }
 
-  .cover {
-    width: min(72%, 560px);
+  .card h2 {
+    font-size: 26px;
+  }
+
+  .article-detail h2 {
+    font-size: 30px;
   }
 }
 
