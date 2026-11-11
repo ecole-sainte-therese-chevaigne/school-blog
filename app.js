@@ -17,10 +17,9 @@
   function reportFrameHeight() {
     if (window.parent === window) return;
 
-    const height = Math.max(
-      document.documentElement.scrollHeight,
-      document.body.scrollHeight
-    );
+    const content = document.querySelector('.wrap');
+    if (!content) return;
+    const height = Math.ceil(content.getBoundingClientRect().height);
     let targetOrigin = '*';
     try {
       if (document.referrer) targetOrigin = new URL(document.referrer).origin;
@@ -36,8 +35,9 @@
     heightFrame = requestAnimationFrame(reportFrameHeight);
   }
 
-  if ('ResizeObserver' in window) {
-    new ResizeObserver(scheduleHeightReport).observe(document.documentElement);
+  const blogContent = document.querySelector('.wrap');
+  if ('ResizeObserver' in window && blogContent) {
+    new ResizeObserver(scheduleHeightReport).observe(blogContent);
   }
   window.addEventListener('load', scheduleHeightReport);
 
