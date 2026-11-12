@@ -9,10 +9,28 @@
   const category = $('#category');
   const tag = $('#tag');
   const filterSummary = $('#filter-summary');
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.hidden = true;
+  lightbox.setAttribute('role', 'dialog');
+  lightbox.setAttribute('aria-modal', 'true');
+  lightbox.setAttribute('aria-label', 'Galerie photo');
+  lightbox.innerHTML = `
+    <button class="lightbox-close" type="button" aria-label="Fermer la galerie">×</button>
+    <button class="lightbox-prev" type="button" aria-label="Photo précédente">‹</button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-image" alt="">
+      <figcaption class="lightbox-count" aria-live="polite"></figcaption>
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Photo suivante">›</button>`;
+  document.body.append(lightbox);
 
   let all = [];
   let shown = 12;
   let selected = null;
+  let galleryPhotos = [];
+  let galleryIndex = 0;
+  let galleryTitle = '';
 
   function reportFrameHeight() {
     if (window.parent === window) return;
@@ -158,10 +176,13 @@
       ${post.documents?.length ? `<h3>Documents</h3><ul class="docs">${post.documents.map((document) => (
         `<li><a href="${esc(mediaSrc(document))}" target="_blank" rel="noopener">${esc(mediaName(document))}</a></li>`
       )).join('')}</ul>` : ''}
-      ${post.photos?.length ? `<h3>Photos</h3><div class="gallery">${post.photos.map((image) => (
-        `<a href="${esc(mediaSrc(image))}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(mediaSrc(image))}" alt="${esc(mediaAlt(image, post.title))}"></a>`
+      ${post.photos?.length ? `<h3>Photos</h3><div class="gallery${post.photos.length === 1 ? ' gallery--single' : ''}" aria-label="Galerie photo">${post.photos.map((image, index) => (
+        `<button class="gallery-item" type="button" data-gallery-index="${index}" aria-label="Afficher la photo ${index + 1} sur ${post.photos.length}"><img loading="lazy" src="${esc(mediaSrc(image))}" alt="${esc(mediaAlt(image, post.title))}"></button>`
       )).join('')}</div>` : ''}
     </div>`;
+
+    galleryPhotos = post.photos || [];
+    galleryTitle = post.title;
 
     window.scrollTo(0, 0);
     $('#back').onclick = closeArticle;
@@ -185,6 +206,44 @@
       event.preventDefault();
       openArticle(openButton.dataset.open);
     }
+  });
+
+  article.addEventListener('click', (event) => {
+    const photoButton = event.target.closest('[data-gallery-index]');
+    if (photoButton) showGalleryImage(Number(photoButton.dataset.galleryIndex));
+  });
+
+  function showGalleryImage(index) {
+    if (!galleryPhotos.length) return;
+    galleryIndex = (index + galleryPhotos.length) % galleryPhotos.length;
+    const photo = galleryPhotos[galleryIndex];
+    const image = lightbox.querySelector('.lightbox-image');
+    image.src = mediaSrc(photo);
+    image.alt = mediaAlt(photo, galleryTitle || 'Photo de l’école');
+    lightbox.querySelector('.lightbox-count').textContent = `${galleryIndex + 1} / ${galleryPhotos.length}`;
+    lightbox.hidden = false;
+    document.body.classList.add('lightbox-open');
+    lightbox.querySelector('.lightbox-close').focus();
+  }
+
+  function closeLightbox() {
+    if (lightbox.hidden) return;
+    lightbox.hidden = true;
+    lightbox.querySelector('.lightbox-image').removeAttribute('src');
+    document.body.classList.remove('lightbox-open');
+  }
+
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox || event.target.closest('.lightbox-close')) closeLightbox();
+    else if (event.target.closest('.lightbox-prev')) showGalleryImage(galleryIndex - 1);
+    else if (event.target.closest('.lightbox-next')) showGalleryImage(galleryIndex + 1);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (lightbox.hidden) return;
+    if (event.key === 'Escape') closeLightbox();
+    else if (event.key === 'ArrowLeft') showGalleryImage(galleryIndex - 1);
+    else if (event.key === 'ArrowRight') showGalleryImage(galleryIndex + 1);
   });
 
   [search, category, tag].forEach((control) => {
