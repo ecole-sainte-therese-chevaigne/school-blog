@@ -134,8 +134,9 @@ body {
 .card h2 {
   margin: 0 0 22px;
   font-family: Lato, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700 !important;
+  color: #666666;
   line-height: 1.25;
 }
 
@@ -144,7 +145,7 @@ body {
   padding: 0;
   border: 0;
   background: transparent;
-  color: #282828;
+  color: #666666;
   font: inherit;
   font-weight: 700 !important;
   text-align: left;
