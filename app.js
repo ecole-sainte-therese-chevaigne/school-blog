@@ -119,7 +119,7 @@
         <h2><a href="#${encodeURIComponent(post.id)}" data-open="${esc(post.id)}">${esc(post.title)}</a></h2>
         ${cover}
         ${description}
-        <button class="open" type="button" data-open="${esc(post.id)}">Lire la suite…</button>
+        <a class="open" href="#${encodeURIComponent(post.id)}" data-open="${esc(post.id)}">Lire la suite…</a>
       </div>
     </article>`;
   }
@@ -181,7 +181,10 @@
 
   cards.addEventListener('click', (event) => {
     const openButton = event.target.closest('[data-open]');
-    if (openButton) openArticle(openButton.dataset.open);
+    if (openButton) {
+      event.preventDefault();
+      openArticle(openButton.dataset.open);
+    }
   });
 
   [search, category, tag].forEach((control) => {
