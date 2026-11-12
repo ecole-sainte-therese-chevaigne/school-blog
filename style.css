@@ -135,7 +135,7 @@ body {
   margin: 0 0 22px;
   font-family: Lato, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.25;
 }
 
@@ -146,6 +146,7 @@ body {
   background: transparent;
   color: #282828;
   font: inherit;
+  font-weight: 700 !important;
   text-align: left;
   cursor: pointer;
 }
@@ -158,8 +159,8 @@ body {
 
 .cover {
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: 50%;
+  max-width: 50%;
   height: auto;
   margin: 0 0 18px;
   object-fit: contain;
@@ -445,7 +446,7 @@ body {
     right: 8px;
   }
 
-  .cover {
+ .cover {
     width: 100%;
   }
 }
