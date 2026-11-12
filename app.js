@@ -9,6 +9,7 @@
   const category = $('#category');
   const tag = $('#tag');
   const filterSummary = $('#filter-summary');
+  const categoryHeading = $('#category-heading');
   const lightbox = document.createElement('div');
   lightbox.className = 'lightbox';
   lightbox.hidden = true;
@@ -149,6 +150,8 @@
       || '<p class="empty">Aucun article ne correspond à votre recherche.</p>';
     count.textContent = `${items.length} article${items.length > 1 ? 's' : ''}`;
     more.hidden = shown >= items.length;
+    categoryHeading.textContent = category.value;
+    categoryHeading.hidden = !category.value;
     filterSummary.textContent = category.value
       ? `Rubrique : ${category.value} · modifier les filtres`
       : 'Rechercher ou filtrer les articles';
