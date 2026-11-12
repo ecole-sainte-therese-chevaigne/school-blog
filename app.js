@@ -9,28 +9,10 @@
   const category = $('#category');
   const tag = $('#tag');
   const filterSummary = $('#filter-summary');
-  const lightbox = document.createElement('div');
-  lightbox.className = 'lightbox';
-  lightbox.hidden = true;
-  lightbox.setAttribute('role', 'dialog');
-  lightbox.setAttribute('aria-modal', 'true');
-  lightbox.setAttribute('aria-label', 'Galerie photo');
-  lightbox.innerHTML = `
-    <button class="lightbox-close" type="button" aria-label="Fermer la galerie">×</button>
-    <button class="lightbox-prev" type="button" aria-label="Photo précédente">‹</button>
-    <figure class="lightbox-figure">
-      <img class="lightbox-image" alt="">
-      <figcaption class="lightbox-count" aria-live="polite"></figcaption>
-    </figure>
-    <button class="lightbox-next" type="button" aria-label="Photo suivante">›</button>`;
-  document.body.append(lightbox);
 
   let all = [];
   let shown = 12;
   let selected = null;
-  let galleryPhotos = [];
-  let galleryIndex = 0;
-  let galleryTitle = '';
 
   function reportFrameHeight() {
     if (window.parent === window) return;
@@ -124,15 +106,10 @@
   function card(post) {
     const image = mediaSrc(post.photos?.[0]);
     const cover = image
-      ? `<button class="cover-link" type="button" data-gallery-index="0" data-post-id="${esc(post.id)}" aria-label="Ouvrir les photos de ${esc(post.title)}"><img class="cover" loading="lazy" src="${esc(image)}" alt="${esc(mediaAlt(post.photos[0], post.title))}"></button>`
+      ? `<img class="cover" loading="lazy" src="${esc(image)}" alt="${esc(mediaAlt(post.photos[0], post.title))}">`
       : '';
     const description = post.description
       ? `<p class="description">${esc(post.description)}</p>`
-      : '';
-    const tags = (post.tags || []).length
-      ? `<p class="keywords"><strong>Catégories :</strong> ${(post.tags || []).map((keyword) => (
-        `<button class="keyword" type="button" data-tag="${esc(keyword)}">${esc(keyword)}</button>`
-      )).join(', ')}</p>`
       : '';
 
     return `<article class="card">
@@ -142,7 +119,6 @@
         <h2><a href="#${encodeURIComponent(post.id)}" data-open="${esc(post.id)}">${esc(post.title)}</a></h2>
         ${cover}
         ${description}
-        ${tags}
         <button class="open" type="button" data-open="${esc(post.id)}">Lire la suite…</button>
       </div>
     </article>`;
@@ -171,14 +147,6 @@
     const description = !post.content && post.description
       ? `<p class="description">${esc(post.description)}</p>`
       : '';
-    const firstPhoto = post.photos?.length
-      ? `<div class="post-photo"><button class="cover-link" type="button" data-gallery-index="0" aria-label="Ouvrir les ${post.photos.length} photos de l’article"><img class="cover" loading="lazy" src="${esc(mediaSrc(post.photos[0]))}" alt="${esc(mediaAlt(post.photos[0], post.title))}"></button></div>`
-      : '';
-    const tags = (post.tags || []).length
-      ? `<p class="keywords"><strong>Catégories :</strong> ${(post.tags || []).map((keyword) => (
-        `<button class="keyword" type="button" data-tag="${esc(keyword)}">${esc(keyword)}</button>`
-      )).join(', ')}</p>`
-      : '';
 
     article.innerHTML = `<div class="article-detail">
       <button class="back" id="back" type="button">← Retour aux articles</button>
@@ -190,12 +158,10 @@
       ${post.documents?.length ? `<h3>Documents</h3><ul class="docs">${post.documents.map((document) => (
         `<li><a href="${esc(mediaSrc(document))}" target="_blank" rel="noopener">${esc(mediaName(document))}</a></li>`
       )).join('')}</ul>` : ''}
-      ${firstPhoto}
-      ${tags}
+      ${post.photos?.length ? `<h3>Photos</h3><div class="gallery">${post.photos.map((image) => (
+        `<a href="${esc(mediaSrc(image))}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(mediaSrc(image))}" alt="${esc(mediaAlt(image, post.title))}"></a>`
+      )).join('')}</div>` : ''}
     </div>`;
-
-    galleryPhotos = post.photos || [];
-    galleryTitle = post.title;
 
     window.scrollTo(0, 0);
     $('#back').onclick = closeArticle;
@@ -214,82 +180,8 @@
   }
 
   cards.addEventListener('click', (event) => {
-    const photoButton = event.target.closest('[data-gallery-index]');
-    if (photoButton) {
-      const post = all.find((item) => item.id === photoButton.dataset.postId);
-      galleryPhotos = post?.photos || [];
-      galleryTitle = post?.title || '';
-      showPhoto(Number(photoButton.dataset.galleryIndex));
-      return;
-    }
-
-    const keywordButton = event.target.closest('[data-tag]');
-    if (keywordButton) {
-      tag.value = keywordButton.dataset.tag;
-      category.value = '';
-      shown = 12;
-      render();
-      return;
-    }
-
     const openButton = event.target.closest('[data-open]');
     if (openButton) openArticle(openButton.dataset.open);
-  });
-
-  article.addEventListener('click', (event) => {
-    const photoButton = event.target.closest('[data-gallery-index]');
-    if (photoButton) {
-      showPhoto(Number(photoButton.dataset.galleryIndex));
-      return;
-    }
-
-    const keywordButton = event.target.closest('[data-tag]');
-    if (keywordButton) {
-      tag.value = keywordButton.dataset.tag;
-      category.value = '';
-      selected = null;
-      article.hidden = true;
-      listing.hidden = false;
-      article.innerHTML = '';
-      if (location.hash) history.replaceState({}, '', location.pathname + location.search);
-      shown = 12;
-      render();
-    }
-  });
-
-  function showPhoto(index) {
-    if (!galleryPhotos.length) return;
-    galleryIndex = (index + galleryPhotos.length) % galleryPhotos.length;
-    const photo = galleryPhotos[galleryIndex];
-    const image = lightbox.querySelector('.lightbox-image');
-    image.src = mediaSrc(photo);
-    image.alt = mediaAlt(photo, galleryTitle || 'Photo de l’école');
-    lightbox.querySelector('.lightbox-count').textContent = `${galleryIndex + 1} / ${galleryPhotos.length}`;
-    lightbox.hidden = false;
-    document.body.classList.add('lightbox-open');
-    lightbox.querySelector('.lightbox-close').focus();
-    scheduleHeightReport();
-  }
-
-  function closeLightbox() {
-    if (lightbox.hidden) return;
-    lightbox.hidden = true;
-    lightbox.querySelector('.lightbox-image').removeAttribute('src');
-    document.body.classList.remove('lightbox-open');
-    scheduleHeightReport();
-  }
-
-  lightbox.addEventListener('click', (event) => {
-    if (event.target === lightbox || event.target.closest('.lightbox-close')) closeLightbox();
-    else if (event.target.closest('.lightbox-prev')) showPhoto(galleryIndex - 1);
-    else if (event.target.closest('.lightbox-next')) showPhoto(galleryIndex + 1);
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (lightbox.hidden) return;
-    if (event.key === 'Escape') closeLightbox();
-    else if (event.key === 'ArrowLeft') showPhoto(galleryIndex - 1);
-    else if (event.key === 'ArrowRight') showPhoto(galleryIndex + 1);
   });
 
   [search, category, tag].forEach((control) => {

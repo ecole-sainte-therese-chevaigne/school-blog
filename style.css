@@ -1,6 +1,6 @@
 @import url('https://fonts.jimstatic.com/css?family=Lato:300');
 @import url('https://fonts.jimstatic.com/css?family=Lato:700');
-@import url('https://fonts.jimstatic.com/css?family=Source+Sans+Pro:400,700');
+@import url('https://fonts.jimstatic.com/css?family=Source+Sans+Pro:400');
 
 * {
   box-sizing: border-box;
@@ -133,9 +133,9 @@ body {
 
 .card h2 {
   margin: 0 0 22px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 32px;
-  font-weight: 700;
+  font-family: Lato, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
   line-height: 1.25;
 }
 
@@ -158,20 +158,6 @@ body {
   margin: 0 0 18px;
   object-fit: contain;
   background: transparent;
-}
-
-.cover-link {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: zoom-in;
-}
-
-.post-photo {
-  width: 100%;
-  margin: 26px 0 22px;
 }
 
 .description {
@@ -241,7 +227,8 @@ body {
   margin: 0 0 18px;
   font-family: Lato, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 64px;
-  font-weight: 300;
+  font-weight: 700;
+  color: #666;
   line-height: 1.05;
 }
 
@@ -257,31 +244,6 @@ body {
   color: #444;
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-
-.keywords {
-  margin: 22px 0 0;
-  color: #555;
-  font-size: 16px;
-}
-
-.keywords strong {
-  font-weight: 600;
-}
-
-.keyword {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  cursor: pointer;
-}
-
-.keyword:hover {
-  color: #222;
 }
 
 .gallery {
@@ -304,84 +266,6 @@ body {
   height: auto;
   border-radius: 0;
   background: transparent;
-}
-
-.lightbox[hidden] {
-  display: none;
-}
-
-.lightbox {
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  display: grid;
-  grid-template-columns: minmax(48px, 1fr) minmax(0, 1400px) minmax(48px, 1fr);
-  align-items: center;
-  padding: 54px 20px 30px;
-  background: rgba(0, 0, 0, 0.92);
-  color: #fff;
-}
-
-.lightbox-open {
-  overflow: hidden;
-}
-
-.lightbox-figure {
-  grid-column: 2;
-  display: grid;
-  justify-items: center;
-  gap: 12px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0;
-}
-
-.lightbox-image {
-  display: block;
-  max-width: 100%;
-  max-height: calc(100vh - 115px);
-  object-fit: contain;
-}
-
-.lightbox-count {
-  color: #fff;
-  font-size: 16px;
-}
-
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-  position: absolute;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.14);
-  color: #fff;
-  font: 36px/1 Arial, sans-serif;
-  cursor: pointer;
-}
-
-.lightbox-close:hover,
-.lightbox-prev:hover,
-.lightbox-next:hover {
-  background: rgba(255, 255, 255, 0.28);
-}
-
-.lightbox-close {
-  top: 16px;
-  right: 20px;
-}
-
-.lightbox-prev {
-  left: 20px;
-}
-
-.lightbox-next {
-  right: 20px;
 }
 
 .docs {
@@ -420,19 +304,6 @@ body {
 
   .article-detail h2 {
     font-size: 30px;
-  }
-
-  .lightbox {
-    grid-template-columns: 44px minmax(0, 1fr) 44px;
-    padding: 60px 10px 24px;
-  }
-
-  .lightbox-prev {
-    left: 8px;
-  }
-
-  .lightbox-next {
-    right: 8px;
   }
 }
 
