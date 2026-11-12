@@ -116,7 +116,7 @@
       <div class="card-body">
         ${meta(post)}
         ${photoPeriod(post)}
-        <h2><a href="#${encodeURIComponent(post.id)}" data-open="${esc(post.id)}">${esc(post.title)}</a></h2>
+        <h2><button class="title-link" type="button" data-open="${esc(post.id)}">${esc(post.title)}</button></h2>
         ${cover}
         ${description}
         <a class="open" href="#${encodeURIComponent(post.id)}" data-open="${esc(post.id)}">Lire la suite…</a>

@@ -139,12 +139,18 @@ body {
   line-height: 1.25;
 }
 
-.card h2 a {
+.card h2 .title-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: #282828;
-  text-decoration: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-.card h2 a:hover,
+.card h2 .title-link:hover,
 .open:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
