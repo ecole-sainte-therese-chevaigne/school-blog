@@ -15,6 +15,11 @@ html.embedded-blog {
   background: transparent;
 }
 
+html.embedded-blog body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 0;
   background: transparent;
