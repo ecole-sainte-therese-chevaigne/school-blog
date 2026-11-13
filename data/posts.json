@@ -19,9 +19,7 @@
         "assets/articles/34-realisation-de-maquettes/002.webp",
         "assets/articles/34-realisation-de-maquettes/003.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/histoire-et-géographie/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/histoire-et-géographie/"
     },
     {
       "id": "71663865-5f71-4520-bc7d-5604b7d27d2c",
@@ -47,9 +45,7 @@
         "assets/articles/32-atelier-de-fabrication-de-papier-recycle/007.webp",
         "assets/articles/32-atelier-de-fabrication-de-papier-recycle/008.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/"
     },
     {
       "id": "2f342ffc-9c60-4c6e-baf6-7cee3e042b13",
@@ -70,9 +66,7 @@
         "assets/articles/31-atelier-de-recyclage-des-dechets/002.webp",
         "assets/articles/31-atelier-de-recyclage-des-dechets/003.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/"
     },
     {
       "id": "a978f4de-cac5-4608-9588-b1c09e560716",
@@ -102,17 +96,13 @@
         "assets/articles/13-la-batterie/012.webp",
         "assets/articles/13-la-batterie/013.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/"
     },
     {
       "id": "cc1b42cd-dafc-4c1d-9051-b99d890c1740",
       "title": "Boum de fin d'année",
       "date": "2019-06-28",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Événements et vie associative",
       "tags": [
         "Archives",
@@ -124,9 +114,7 @@
         "assets/articles/19-boum-de-fin-d-annee/003.webp",
         "assets/articles/19-boum-de-fin-d-annee/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "f6234189-4578-4ee4-a51a-53b6e43460e2",
@@ -160,9 +148,7 @@
         "assets/articles/17-vive-le-printemps/016.webp",
         "assets/articles/17-vive-le-printemps/017.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/"
     },
     {
       "id": "6f646794-db44-4718-b13f-644376ef9eca",
@@ -198,9 +184,7 @@
         "assets/articles/65-escrime-de-la-grande-section-au-ce2/018.webp",
         "assets/articles/65-escrime-de-la-grande-section-au-ce2/019.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "c8a6ff1b-420b-421d-8408-327242f20d7b",
@@ -220,17 +204,13 @@
         "assets/articles/62-tour-de-froebel/003.webp",
         "assets/articles/62-tour-de-froebel/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "8bc17607-4f2d-46b2-b58b-5af3b4f1fbb1",
       "title": "Visite des religieuses du Burkina Faso",
       "date": "2018-06-19",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Pastorale",
       "tags": [
         "Archives",
@@ -244,9 +224,7 @@
         "assets/articles/07-visite-des-religieuses-du-burkina-faso/005.webp",
         "assets/articles/07-visite-des-religieuses-du-burkina-faso/006.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/"
     },
     {
       "id": "6273e8c4-d1dc-43ae-9f45-d656d4b4de5a",
@@ -293,12 +271,11 @@
         "assets/articles/47-classe-decouverte-chateaux-de-la-loire-juin-2018/029.webp",
         "assets/articles/47-classe-decouverte-chateaux-de-la-loire-juin-2018/030.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/classe-découverte-2018/",
       "photoDates": [
         "2018-06-13",
         "2018-06-14"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/classe-découverte-2018/"
     },
     {
       "id": "2f7dca5f-3202-4829-8243-35cce64914a5",
@@ -314,11 +291,10 @@
       "photos": [
         "assets/articles/39-zoo-de-la-bourbansais/001.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
       "photoDates": [
         "2015-10-23"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "c61641fc-c487-4abd-9d16-7781cf6106eb",
@@ -337,9 +313,7 @@
         "assets/articles/43-la-cite-du-lait-et-le-site-archeologique-de-jublains/003.webp",
         "assets/articles/43-la-cite-du-lait-et-le-site-archeologique-de-jublains/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "1cc091c8-2fcb-44ab-8cb5-a35920e27f72",
@@ -348,7 +322,6 @@
       "dateSource": "manual",
       "description": "ont été fêtés en avril 2007. Les membres des bureaux, auxquels se sont joints d'autres parents bénévoles, ont travaillé pendant des mois à la préparation de cet évènement. Les anciens élèves ont été invités à participer à cet…",
       "content": "Les 150 ans de l'école ont été fêtés en avril 2007.\nLes membres des bureaux, auxquels se sont joints d'autres parents bénévoles, ont travaillé pendant des mois à la préparation de cet évènement.\nLes anciens élèves ont été invités à participer à cet anniversaire. Plusieurs centaines de personnes ont été présentes lors de cette journée qui s'est achevée par un grand diner spectacle.",
-      "category": "",
       "tags": [
         "Archives"
       ],
@@ -367,17 +340,13 @@
         "assets/articles/50-les-150-ans-de-l-ecole/012.webp",
         "assets/articles/50-les-150-ans-de-l-ecole/013.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/l-histoire-de-l-école/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/l-histoire-de-l-école/"
     },
     {
       "id": "df8774db-b1a9-4421-a95e-68b8ffea5288",
       "title": "Sécurité routière, permis vélo pour les CM2",
       "date": "2026-04-24",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Vie des classes",
       "tags": [
         "Archives",
@@ -393,27 +362,20 @@
         "assets/articles/29-securite-routiere-permis-velo-pour-les-cm2/005.webp",
         "assets/articles/29-securite-routiere-permis-velo-pour-les-cm2/006.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/"
     },
     {
       "id": "dae232c1-7c04-420b-9696-f9b9cd2510b5",
       "title": "Festival du film d'animation, vendredi 12 avril",
       "date": "2026-04-12",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
-      "category": "",
       "tags": [
         "Archives"
       ],
       "photos": [
         "assets/articles/40-festival-du-film-d-animation-vendredi-12-avril/001.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "cced8a40-b99d-4a5e-acd4-86e8116b3138",
@@ -430,20 +392,13 @@
         "PS-MS",
         "2025"
       ],
-      "photos": [
-        "assets/articles/01-rentree-de-septembre-2025/001.webp"
-      ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/"
     },
     {
       "id": "d66b6536-c82e-4d75-9657-25386685d98b",
       "title": "Journée athlétisme à Guipel",
       "date": "2025-06-30",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Sport",
       "tags": [
         "Archives",
@@ -472,11 +427,10 @@
         "assets/articles/52-journee-athletisme-a-guipel/019.webp",
         "assets/articles/52-journee-athletisme-a-guipel/020.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
       "photoDates": [
         "2025-06-30"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "657e9b7b-0d75-44ef-85b3-357f5fe3f996",
@@ -493,9 +447,7 @@
       "photos": [
         "assets/articles/22-peniche-spectacle/001.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "03e907b6-1767-4ec0-9044-ac7f948fe0ef",
@@ -516,9 +468,7 @@
         "assets/articles/12-a-la-mediatheque/003.webp",
         "assets/articles/12-a-la-mediatheque/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/"
     },
     {
       "id": "615c541f-ac53-4c59-a54a-6b47bf2bf707",
@@ -559,11 +509,10 @@
         "assets/articles/27-plantation-d-arbres/022.webp",
         "assets/articles/27-plantation-d-arbres/023.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/",
       "photoDates": [
         "2024-11-22"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/"
     },
     {
       "id": "f8eff436-4576-4686-8fff-1316df5cf366",
@@ -585,9 +534,7 @@
         "assets/articles/28-gaspillage-alimentaire-et-consommation-responsable/004.webp",
         "assets/articles/28-gaspillage-alimentaire-et-consommation-responsable/005.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/"
     },
     {
       "id": "b57fc1f8-9144-4fdd-a905-bb84391e8ee1",
@@ -607,17 +554,13 @@
         "assets/articles/02-mardi-1er-octobre-2024-ateliers-cirque/002.webp",
         "assets/articles/02-mardi-1er-octobre-2024-ateliers-cirque/003.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/actualités/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/actualités/"
     },
     {
       "id": "9b87c794-e505-4d21-aa77-2bce4dab9f77",
       "title": "Bénédiction des cartables — 13 septembre 2024",
       "date": "2024-09-13",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Pastorale",
       "tags": [
         "Archives",
@@ -638,11 +581,10 @@
         "assets/articles/04-benediction-des-cartables-vendredi-13-septembre-2024/011.webp",
         "assets/articles/04-benediction-des-cartables-vendredi-13-septembre-2024/012.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/",
       "photoDates": [
         "2024-09-13"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/"
     },
     {
       "id": "12098abf-e649-47a7-9467-988e794cb22a",
@@ -663,17 +605,13 @@
         "assets/articles/59-hip-hop-pour-les-eleves-de-ce-et-cm/004.webp",
         "assets/articles/59-hip-hop-pour-les-eleves-de-ce-et-cm/005.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "e4d5d55b-b420-4c50-8ce6-ab2860b26e50",
       "title": "Journée sportive à Guipel",
       "date": "2024-07-01",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Sport",
       "tags": [
         "Archives",
@@ -702,9 +640,7 @@
         "assets/articles/53-1er-juillet-2024-journee-sportive-a-guipel/019.webp",
         "assets/articles/53-1er-juillet-2024-journee-sportive-a-guipel/020.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "1cb4e193-919c-45bd-bfcf-e0fa475f0712",
@@ -740,9 +676,7 @@
         "assets/articles/54-tir-a-larc-pour-les-gs-cp-2024/017.webp",
         "assets/articles/54-tir-a-larc-pour-les-gs-cp-2024/018.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "2e39058a-68b4-4808-8759-05035e57fab6",
@@ -751,7 +685,6 @@
       "dateSource": "manual",
       "description": "2024 : CYCLE PISCINE pour les GS/CP/CE1/CE2",
       "content": "2024 : CYCLE PISCINE pour les GS/CP/CE1/CE2",
-      "category": "",
       "tags": [
         "Archives",
         "Activités sportives",
@@ -776,17 +709,13 @@
         "assets/articles/55-cycle-piscine-gs-cp-ce1-et-ce2-2024/015.webp",
         "assets/articles/55-cycle-piscine-gs-cp-ce1-et-ce2-2024/016.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "4c4d51d1-065c-4a0b-9bc1-242d313ac17f",
       "title": "Les élèves de GS-CP au Grand Cordel : vendredi 15 mars 2024",
       "date": "2024-03-15",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Sorties et séjours",
       "tags": [
         "Archives",
@@ -803,17 +732,13 @@
         "assets/articles/41-les-eleves-de-gs-cp-au-grand-cordel-vendredi-15-mars-2024/007.webp",
         "assets/articles/41-les-eleves-de-gs-cp-au-grand-cordel-vendredi-15-mars-2024/008.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "560be438-ce8c-41c2-8bbf-7f6fc14d739a",
       "title": "Carnaval 2024",
       "date": "2024-03-15",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Événements et vie associative",
       "tags": [
         "Archives",
@@ -828,9 +753,7 @@
         "assets/articles/20-carnaval-2024/004.webp",
         "assets/articles/20-carnaval-2024/005.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "095d7951-e2c6-4870-bb28-e6ce9b179ce0",
@@ -1065,7 +988,6 @@
         "assets/articles/38-classe-de-neige-a-peyragudes-2024/document-1.pdf",
         "assets/articles/38-classe-de-neige-a-peyragudes-2024/document-2.pdf"
       ],
-      "source": "https://www.ecolesaintetheresechevaigne.com/classe-de-neige-2024/",
       "photoDates": [
         "2024-02-04",
         "2024-02-05",
@@ -1073,7 +995,8 @@
         "2024-02-07",
         "2024-02-08",
         "2024-02-09"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/classe-de-neige-2024/"
     },
     {
       "id": "221040f3-d3e4-473f-95f0-2fc3348312b2",
@@ -1104,9 +1027,7 @@
         "assets/articles/37-visite-du-college-saint-michel/014.webp",
         "assets/articles/37-visite-du-college-saint-michel/015.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/lien-avec-le-collège/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/lien-avec-le-collège/"
     },
     {
       "id": "68257cfb-5db3-4d27-8cda-0eb7b7644504",
@@ -1137,17 +1058,13 @@
         "assets/articles/21-spectacle-de-noel-2023-avec-gerard-souchet/012.webp",
         "assets/articles/21-spectacle-de-noel-2023-avec-gerard-souchet/013.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "5ccca83a-d90e-49bb-8df8-b90fcfa1f1b0",
       "title": "Célébration d'Avent 2023",
       "date": "2023-12-05",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Pastorale",
       "tags": [
         "Archives",
@@ -1160,9 +1077,7 @@
         "assets/articles/05-celebration-d-avent-2023/003.webp",
         "assets/articles/05-celebration-d-avent-2023/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/"
     },
     {
       "id": "139d6e18-ebbc-4efc-877e-ec92ec3aa4e0",
@@ -1179,17 +1094,13 @@
       "photos": [
         "assets/articles/08-tuxbot/001.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/"
     },
     {
       "id": "8d00dd73-412d-4d9e-82ac-c964788649f7",
       "title": "Cérémonie du 11 novembre 2023",
       "date": "2023-11-11",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Vie des classes",
       "tags": [
         "Archives",
@@ -1202,17 +1113,13 @@
         "assets/articles/30-ceremonie-du-11-novembre-2023/002.webp",
         "assets/articles/30-ceremonie-du-11-novembre-2023/003.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/education-morale-et-civique/"
     },
     {
       "id": "6ba80578-168e-461c-8163-2741f71d34cc",
       "title": "Cycle de hockey",
       "date": "2023-11-09",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Sport",
       "tags": [
         "Archives",
@@ -1224,9 +1131,7 @@
         "assets/articles/63-cycle-de-hockey/002.webp",
         "assets/articles/63-cycle-de-hockey/003.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "d8ba5409-f190-49b6-bad6-179d6afc1efd",
@@ -1246,17 +1151,13 @@
         "assets/articles/56-rencontre-endurance-a-betton-vendredi-13-octobre-2023/002.webp",
         "assets/articles/56-rencontre-endurance-a-betton-vendredi-13-octobre-2023/003.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "a168fd21-9d24-4f17-8323-72cba3a5ff2c",
       "title": "Messe de la kermesse",
       "date": "2023-07-09",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Événements et vie associative",
       "tags": [
         "Archives",
@@ -1275,11 +1176,10 @@
         "assets/articles/18-messe-de-la-kermesse/010.webp",
         "assets/articles/18-messe-de-la-kermesse/011.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
       "photoDates": [
         "2025-06-29"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "85a1ea3e-1a0c-402a-b2b9-0ba8f029f283",
@@ -1301,9 +1201,7 @@
         "assets/articles/42-visite-de-la-ferme-de-leo-mardi-4-juillet-2023/004.webp",
         "assets/articles/42-visite-de-la-ferme-de-leo-mardi-4-juillet-2023/005.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "25751904-d74b-4ea3-9556-a6575e612182",
@@ -1330,9 +1228,7 @@
         "assets/articles/44-la-ferme-aux-escargots-vendredi-16-juin-2023/008.webp",
         "assets/articles/44-la-ferme-aux-escargots-vendredi-16-juin-2023/009.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "735e97fc-6f35-47be-a083-0ce7bf3cb60a",
@@ -1358,9 +1254,7 @@
         "assets/articles/06-semaine-sainte-et-celebration-de-paques/009.webp",
         "assets/articles/06-semaine-sainte-et-celebration-de-paques/010.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/pastorale/"
     },
     {
       "id": "76d12be7-d980-4985-9687-bea1549380e2",
@@ -1393,9 +1287,7 @@
         "assets/articles/45-les-eleves-de-gs-cp-en-visite-aux-champs-libres-jeudi-16-mars/016.webp",
         "assets/articles/45-les-eleves-de-gs-cp-en-visite-aux-champs-libres-jeudi-16-mars/017.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "21788fbf-43c4-4d76-835a-fdce3f2eb3d9",
@@ -1415,11 +1307,10 @@
         "assets/articles/36-baby-foot-installation/003.webp",
         "assets/articles/36-baby-foot-installation/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/dans-la-cour-de-récréation/",
       "photoDates": [
         "2023-03-13"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/dans-la-cour-de-récréation/"
     },
     {
       "id": "62193274-37aa-44fb-8670-9af6ea6c6fd8",
@@ -1437,9 +1328,7 @@
       "photos": [
         "assets/articles/60-cycle-patinoire-pour-les-ce-et-les-cm/001.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "828a725c-b31b-4677-9495-528478b4fb47",
@@ -1467,9 +1356,7 @@
         "assets/articles/24-mirabelle-et-ses-amis/011.webp",
         "assets/articles/24-mirabelle-et-ses-amis/012.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "f6c4e6a0-0bac-4c53-bf46-64b09f223502",
@@ -1493,9 +1380,7 @@
         "assets/articles/25-arbre-de-noel-2022/005.webp",
         "assets/articles/25-arbre-de-noel-2022/006.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "d2761d49-bc10-43d1-ab98-f9e6fe9c5268",
@@ -1606,12 +1491,12 @@
         "assets/articles/48-classe-decouverte-a-plouha-juin-2022/document-1.pdf",
         "assets/articles/48-classe-decouverte-a-plouha-juin-2022/document-2.pdf"
       ],
-      "source": "https://www.ecolesaintetheresechevaigne.com/classe-découverte-2022/",
       "photoDates": [
         "2022-06-07",
         "2022-06-08",
         "2022-06-09"
-      ]
+      ],
+      "source": "https://www.ecolesaintetheresechevaigne.com/classe-découverte-2022/"
     },
     {
       "id": "bef6e820-0dc5-4c97-a135-080da0d49208",
@@ -1644,9 +1529,7 @@
         "assets/articles/46-sortie-culturelle-des-eleves-de-ce-et-cm-a-rennes/017.webp",
         "assets/articles/46-sortie-culturelle-des-eleves-de-ce-et-cm-a-rennes/018.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sorties-scolaires/"
     },
     {
       "id": "d822fe8e-ba65-483d-88a6-936d9881d83d",
@@ -1671,9 +1554,7 @@
         "assets/articles/14-en-avant-la-musique/007.webp",
         "assets/articles/14-en-avant-la-musique/008.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/"
     },
     {
       "id": "189a3911-aa64-4539-8f01-66143b778cae",
@@ -1700,9 +1581,7 @@
         "assets/articles/26-spectacle-pour-les-maternelles-et-le-cycle-2/010.webp",
         "assets/articles/26-spectacle-pour-les-maternelles-et-le-cycle-2/011.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "e661ee8c-bb4d-407e-961c-7495fde0a856",
@@ -1722,9 +1601,7 @@
         "assets/articles/10-la-passion-du-bois/003.webp",
         "assets/articles/10-la-passion-du-bois/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/"
     },
     {
       "id": "03cca560-9e56-499d-b7c3-6fac9fafc644",
@@ -1733,7 +1610,6 @@
       "dateSource": "manual",
       "description": "Durant cette première période, les élèves des classes de CE et CM ont pratiqué des sports américains, grâce aux services proposés par l'OCSPAC de Saint-Aubin-D'Aubigné. Merci aux animateurs Guillaume et Nynian. Ainsi, les enfants ont…",
       "content": "Durant cette première période, les élèves des classes de CE et CM ont pratiqué des sports américains, grâce aux services proposés par l'OCSPAC de Saint-Aubin-D'Aubigné. Merci aux animateurs Guillaume et Nynian.\nAinsi, les enfants ont joué au Flag Rugby, au Baseball et à la Crosse québécoise.\nQuelques photos ici\nQuelques photos ici : https://drive.google.com/drive/folders/1lIu-rpkd6A1RObUqcOFXZU4BqVmMuANx?usp=sharing",
-      "category": "",
       "tags": [
         "Archives",
         "Activités sportives"
@@ -1744,9 +1620,7 @@
         "assets/articles/64-sports-americains/003.webp",
         "assets/articles/64-sports-americains/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "2c8d70f0-5683-47f4-b1ae-916daa5b00f8",
@@ -1763,9 +1637,7 @@
       "photos": [
         "assets/articles/23-notre-100eme-jour-d-ecole/001.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-festives/"
     },
     {
       "id": "a000e5e5-0a47-49b7-866a-19b9bfbb7762",
@@ -1797,8 +1669,7 @@
       "documents": [
         "assets/articles/51-grace-a-vous-la-cour-est-plus-belle/document-1.pdf"
       ],
-      "source": "https://www.ecolesaintetheresechevaigne.com/rénovation-de-nos-cours/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/rénovation-de-nos-cours/"
     },
     {
       "id": "13a42ecb-7b90-4f97-a8a5-0e44df07693b",
@@ -1821,9 +1692,7 @@
         "assets/articles/66-escrime-en-cm1-cm2-novembre-decembre-2019/003.webp",
         "assets/articles/66-escrime-en-cm1-cm2-novembre-decembre-2019/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "da67c98e-1b4f-44f0-a07f-e2dd37c2a348",
@@ -1849,9 +1718,7 @@
         "assets/articles/61-cycle-de-tennis-de-table-pour-les-eleves-de-ce-et-de-cm/008.webp",
         "assets/articles/61-cycle-de-tennis-de-table-pour-les-eleves-de-ce-et-de-cm/009.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "c881d652-1e09-434f-8704-c85fe4f42826",
@@ -1868,9 +1735,7 @@
       "photos": [
         "assets/articles/33-les-archives/001.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/histoire-et-géographie/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/histoire-et-géographie/"
     },
     {
       "id": "877c6f61-d199-4097-8ff1-b0ca4a4be5a5",
@@ -1891,9 +1756,7 @@
         "assets/articles/11-installation-d-un-elevage-de-phasmes-batons/003.webp",
         "assets/articles/11-installation-d-un-elevage-de-phasmes-batons/004.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/"
     },
     {
       "id": "34d8f38c-a169-41f7-82c9-57a99904d94f",
@@ -1930,17 +1793,13 @@
         "assets/articles/57-tournoi-dechecs/019.webp",
         "assets/articles/57-tournoi-dechecs/020.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sports/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sports/"
     },
     {
       "id": "8fd527dc-d689-4e3f-b58a-3f3d31dcd572",
       "title": "Réalisations dans notre salle de motricité",
       "date": "2019-11-29",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Vie des classes",
       "tags": [
         "Archives",
@@ -1951,9 +1810,7 @@
         "assets/articles/16-realisations-dans-notre-salle-de-motricite/002.webp",
         "assets/articles/16-realisations-dans-notre-salle-de-motricite/003.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/"
     },
     {
       "id": "a54c1df6-75c7-4d04-8e1f-3a0cf0f8ee4c",
@@ -1975,9 +1832,7 @@
         "assets/articles/15-land-art-dessine-moi-un-oiseau/004.webp",
         "assets/articles/15-land-art-dessine-moi-un-oiseau/005.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/activités-artistiques-et-littéraires/"
     },
     {
       "id": "69c6286a-3c90-420c-be3e-07246f6b3673",
@@ -2000,17 +1855,13 @@
         "assets/articles/09-les-escargots/005.webp",
         "assets/articles/09-les-escargots/006.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/sciences-et-techniques/"
     },
     {
       "id": "a0800fb0-c6be-4026-b29e-84e0cec680d4",
       "title": "Réalisation de châtelets",
       "date": "2019-11-21",
       "dateSource": "manual",
-      "description": "",
-      "content": "",
       "category": "Vie des classes",
       "tags": [
         "Archives",
@@ -2024,9 +1875,7 @@
         "assets/articles/35-realisation-de-chatelets/005.webp",
         "assets/articles/35-realisation-de-chatelets/006.webp"
       ],
-      "documents": [],
-      "source": "https://www.ecolesaintetheresechevaigne.com/histoire-et-géographie/",
-      "photoDates": []
+      "source": "https://www.ecolesaintetheresechevaigne.com/histoire-et-géographie/"
     }
   ]
 }
